@@ -33,7 +33,7 @@ const HeroSection = () => {
               <div className='w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-card overflow-hidden bg-card shadow-lg'>
                 <img
                   src='https://avatars.githubusercontent.com/Dams168?size=512'
-                  alt='Alex Chen'
+                  alt='Adam Arrahman'
                   className='w-full h-full object-cover'
                   width={512}
                   height={512}
@@ -47,13 +47,11 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className='mt-4 text-center sm:text-left'
             >
-              <h1 className='text-2xl md:text-3xl font-bold text-foreground'>Alex Chen</h1>
-              <p className='text-lg text-primary font-medium mt-1'>
-                Frontend Developer & UI Engineer
-              </p>
+              <h1 className='text-2xl md:text-3xl font-bold text-foreground'>Adam Arrahman</h1>
+              <p className='text-lg text-primary font-medium mt-1'>Backend Developer</p>
               <div className='flex items-center justify-center sm:justify-start gap-1.5 text-muted-foreground mt-2 text-sm'>
                 <MapPin className='w-4 h-4' />
-                <span>San Francisco, CA</span>
+                <span>Indonesia</span>
               </div>
               <div className='flex flex-wrap gap-3 mt-4 justify-center sm:justify-start'>
                 <Button size='sm'>
@@ -64,11 +62,25 @@ const HeroSection = () => {
                   <Download className='w-4 h-4 mr-1.5' />
                   Download CV
                 </Button>
-                <Button variant='outline' size='icon' className='h-8 w-8'>
-                  <Github className='w-4 h-4' />
+                <Button variant='outline' size='icon' className='h-8 w-8' asChild>
+                  <a
+                    href='https://github.com/Dams168'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='GitHub profile'
+                  >
+                    <Github className='w-4 h-4' />
+                  </a>
                 </Button>
-                <Button variant='outline' size='icon' className='h-8 w-8'>
-                  <Linkedin className='w-4 h-4' />
+                <Button variant='outline' size='icon' className='h-8 w-8' asChild>
+                  <a
+                    href='https://linkedin.com/in/adam-arrahman'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='LinkedIn profile'
+                  >
+                    <Linkedin className='w-4 h-4' />
+                  </a>
                 </Button>
               </div>
             </motion.div>

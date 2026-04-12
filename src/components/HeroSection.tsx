@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { MapPin, Download, Mail, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import coverBanner from '@/assets/cover-banner.jpg';
-import TerminalJSON from './TerminalJSON';
 
 const HeroSection = () => {
   return (
@@ -54,14 +53,14 @@ const HeroSection = () => {
                 <span>Indonesia</span>
               </div>
               <div className='flex flex-wrap gap-3 mt-4 justify-center sm:justify-start'>
-                <Button size='sm'>
+                {/* <Button size='sm'>
                   <Mail className='w-4 h-4 mr-1.5' />
                   Contact
-                </Button>
-                <Button variant='outline' size='sm'>
+                </Button> */}
+                {/* <Button variant='outline' size='sm'>
                   <Download className='w-4 h-4 mr-1.5' />
                   Download CV
-                </Button>
+                </Button> */}
                 <Button variant='outline' size='icon' className='h-8 w-8' asChild>
                   <a
                     href='https://github.com/Dams168'
@@ -88,7 +87,12 @@ const HeroSection = () => {
 
           {/* Right: Terminal */}
           <div className='flex-1 flex items-center justify-center lg:justify-end mt-4 lg:mt-0'>
-            <TerminalJSON />
+            <a href='https://discord.com/users/933959242262659073' target='_blank' rel='nofollow'>
+              <img
+                src='https://lanyard-profile-readme.vercel.app/api/933959242262659073?borderRadius=15px&bg=0b0100&idleMessage=Probably%20doing%20something%20else...'
+                alt='Discord Presence'
+              ></img>
+            </a>
           </div>
         </div>
       </div>

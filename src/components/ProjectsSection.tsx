@@ -31,6 +31,25 @@ const projects = [
     demoUrl: '#',
     codeUrl: 'https://github.com/Dams168/my-e-commerce',
   },
+  {
+    title: 'NGEFLYAJA - E-FLIGHT TICKETING SYSTEM API',
+    description:
+      'A comprehensive e-flight ticketing system with user authentication, flight search, booking management, and payment integration.',
+    tags: ['JavaScript', 'Express.js', 'Swagger', 'Payment Integration'],
+    image:
+      'https://opengraph.githubassets.com/637307de555a41d799490eb31d865f63f5ba8a3cd958e6b3ef828ab4f1b968d7/kelompok8-NgeFlyAja/BackEnd-Development',
+    demoUrl: '#',
+    codeUrl: 'https://github.com/kelompok8-NgeFlyAja/BackEnd-Development',
+  },
+  {
+    title: 'SIRA LABTIF',
+    description:
+      'A laboratory information system for managing recruitment processes and student activities.',
+    tags: ['Laravel', 'PHP', 'MySQL'],
+    image: 'https://opengraph.githubassets.com/1/Dams168/SIRA-Labtif',
+    demoUrl: '#',
+    codeUrl: 'https://github.com/Dams168/SIRA-Labtif',
+  },
 ];
 
 const ProjectsSection = () => {

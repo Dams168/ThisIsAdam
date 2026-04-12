@@ -4,6 +4,13 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
+    title: 'Backend Developer - Internship',
+    company: 'PT. Padepokan Tujuh Sembilan',
+    period: 'Dec 2025 – Present',
+    highlights: [],
+    tags: ['Laravel', 'PHP', 'System Analyst'],
+  },
+  {
     title: 'Admin and Assistant Laboratory of Informatics Engineering',
     company: 'University of Suryakancana',
     period: 'Jul 2024 – Jul 2025',

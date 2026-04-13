@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Download, Mail, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import coverBanner from '@/assets/cover-banner.jpg';
+import DiscordPresenceCard from '@/components/DiscordPresenceCard';
 
 const HeroSection = () => {
   return (
@@ -85,14 +86,9 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Right: Terminal */}
+          {/* Right: Discord live presence */}
           <div className='flex-1 flex items-center justify-center lg:justify-end mt-4 lg:mt-0'>
-            <a href='https://discord.com/users/933959242262659073' target='_blank' rel='nofollow'>
-              <img
-                src='https://lanyard-profile-readme.vercel.app/api/933959242262659073?borderRadius=15px&bg=0b0100&idleMessage=Probably%20doing%20something%20else...'
-                alt='Discord Presence'
-              ></img>
-            </a>
+            <DiscordPresenceCard />
           </div>
         </div>
       </div>

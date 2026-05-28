@@ -15,7 +15,7 @@ const AboutSection = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <h2 className='text-xl font-bold text-foreground mb-4'>About</h2>
+      <h2 className='text-foreground mb-4'>About</h2>
       <div className='flex flex-col lg:flex-row items-start gap-6'>
         <div className='flex-1'>
           <p className='text-muted-foreground leading-relaxed'>

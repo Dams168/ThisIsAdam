@@ -65,7 +65,7 @@ const ProjectsSection = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <h2 className='text-xl font-bold text-foreground mb-6'>Projects</h2>
+      <h2 className='text-foreground mb-6'>Projects</h2>
       <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
         {projects.map((project, i) => (
           <motion.div
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className='rounded-lg border border-border overflow-hidden hover:border-primary/30 transition-colors group'
+            className='rounded-none border-4 border-border overflow-hidden hover:border-primary transition-all duration-300 group shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none bg-card dark:rounded-lg dark:border dark:hover:border-primary/30 dark:shadow-none dark:hover:translate-x-0 dark:hover:translate-y-0'
           >
             <div className='relative aspect-video overflow-hidden bg-muted'>
               <img
@@ -105,14 +105,19 @@ const ProjectsSection = () => {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className='text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium'
+                    className='text-xs px-2 py-0.5 rounded-none border-2 border-border bg-primary text-primary-foreground font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:rounded-full dark:border-0 dark:bg-primary/10 dark:text-primary dark:font-medium dark:shadow-none'
                   >
                     {tag}
                   </span>
                 ))}
               </div>
               <div className='flex gap-2 mt-4'>
-                <Button variant='ghost' size='sm' className='h-8 px-2.5 text-xs' asChild>
+                <Button
+                  variant='ghost'
+                  size='sm'
+                  className='h-8 px-2.5 text-xs dark:rounded-md dark:border dark:border-border dark:bg-card/70 dark:hover:bg-primary/10'
+                  asChild
+                >
                   <a href={project.codeUrl} target='_blank' rel='noopener noreferrer'>
                     <Github className='w-3.5 h-3.5 mr-1' />
                     Code

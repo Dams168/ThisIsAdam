@@ -100,16 +100,16 @@ const TerminalJSON = () => {
       initial={{ opacity: 0, scale: 0.9, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.3 }}
-      className='w-full max-w-md terminal-glow rounded-xl overflow-hidden border border-[hsl(var(--terminal-border))] animate-typing-glow'
+      className='w-full max-w-md rounded-none overflow-hidden border-4 border-border shadow-neo  bg-card'
     >
       {/* Title bar */}
       <div className='flex items-center gap-2 px-4 py-3 bg-[hsl(var(--terminal-border))]'>
         <div className='flex gap-1.5'>
-          <div className='w-3 h-3 rounded-full bg-[hsl(0,70%,55%)]' />
-          <div className='w-3 h-3 rounded-full bg-[hsl(45,80%,55%)]' />
-          <div className='w-3 h-3 rounded-full bg-[hsl(130,50%,50%)]' />
+          <div className='w-3 h-3 rounded-none border-2 border-border bg-destructive' />
+          <div className='w-3 h-3 rounded-none border-2 border-border bg-primary' />
+          <div className='w-3 h-3 rounded-none border-2 border-border bg-accent' />
         </div>
-        <span className='terminal-font text-xs text-[hsl(var(--terminal-bracket))] ml-2 opacity-60'>
+        <span className='terminal-font text-xs text-white ml-2 opacity-80'>
           developer.json
         </span>
       </div>

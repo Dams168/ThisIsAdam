@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Public Sans", "sans-serif"],
+        heading: ["Lexend Mega", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -62,6 +66,12 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        neo: "4px 4px 0px 0px rgba(0,0,0,1)",
+        "neo-hover": "2px 2px 0px 0px rgba(0,0,0,1)",
+        "neo-dark": "4px 4px 0px 0px rgba(255,255,255,1)",
+        "neo-hover-dark": "2px 2px 0px 0px rgba(255,255,255,1)",
       },
       keyframes: {
         "accordion-down": {

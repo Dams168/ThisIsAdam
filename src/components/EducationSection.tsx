@@ -25,7 +25,7 @@ const EducationSection = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <h2 className='text-xl font-bold text-foreground mb-6'>Education</h2>
+      <h2 className='text-foreground mb-6'>Education</h2>
       {education.map((edu, i) => (
         <div key={i} className='flex gap-4'>
           <div className='flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center'>

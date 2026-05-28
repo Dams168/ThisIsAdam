@@ -7,7 +7,10 @@ const experiences = [
     title: 'Backend Developer - Internship',
     company: 'PT. Padepokan Tujuh Sembilan',
     period: 'Dec 2025 – Present',
-    highlights: [],
+    highlights: [
+      'Delivered 4 core modular features for Laravel-based “LinkStack”, refactored the multi-contributor codebase, built custom analytics middleware, and integrated YouTube Intro embedding for enhanced real-time insights and page personalization while enforcing strict link filtering to block of prohibited URLs.',
+      'Integrated Gemini‑API powered AI reviewer for “SmartEdu AI Essay” and created an offline‑mode fallback with queueing to ensure service continuity.',
+    ],
     tags: ['Laravel', 'PHP', 'System Analyst'],
   },
   {
@@ -62,7 +65,7 @@ const ExperienceSection = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <h2 className='text-xl font-bold text-foreground mb-6'>Experience</h2>
+      <h2 className='text-foreground mb-6'>Experience</h2>
       <div className='space-y-6'>
         {experiences.map((exp, i) => (
           <motion.div
@@ -94,7 +97,7 @@ const ExperienceSection = () => {
                 {exp.tags.map((tag) => (
                   <span
                     key={tag}
-                    className='text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium'
+                    className='text-xs px-2 py-0.5 rounded-none border-2 border-border bg-primary text-primary-foreground font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:rounded-full dark:border-0 dark:bg-primary/10 dark:text-primary dark:font-medium dark:shadow-none'
                   >
                     {tag}
                   </span>

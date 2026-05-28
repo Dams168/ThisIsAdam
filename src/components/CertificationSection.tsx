@@ -42,7 +42,7 @@ const CertificationSection = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <h2 className='text-xl font-bold text-foreground mb-6'>Certifications & Training</h2>
+      <h2 className='text-foreground mb-6'>Certifications & Training</h2>
       <div className='space-y-4'>
         {certifications.map((cert, i) => (
           <motion.div
@@ -76,7 +76,7 @@ const CertificationSection = () => {
                 {cert.tags.map((tag) => (
                   <span
                     key={tag}
-                    className='text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent font-medium'
+                    className='text-xs px-2 py-0.5 rounded-none border-2 border-border bg-accent text-accent-foreground font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:rounded-full dark:border-0 dark:bg-accent/10 dark:text-accent dark:font-medium dark:shadow-none'
                   >
                     {tag}
                   </span>

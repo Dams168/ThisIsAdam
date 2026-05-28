@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Award, Briefcase, Folder, Terminal, User, type LucideIcon } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
@@ -16,6 +17,8 @@ const links: Array<{ label: string; href: string; icon?: LucideIcon; imageSrc?: 
 ];
 
 const Navbar = () => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === 'dark';
   const [isTopVisible, setIsTopVisible] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
@@ -54,8 +57,8 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-40 border-b-4 border-border bg-card transition-opacity duration-300 ${
-          isTopVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+          isDarkTheme ? '' : 'shadow-neo'
+        } ${isTopVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
         <div className='max-w-4xl mx-auto px-4 h-14 flex items-center justify-center'>
           <a href='#hero' className='flex items-center gap-2 font-bold text-foreground'>
@@ -70,7 +73,9 @@ const Navbar = () => {
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
         }`}
       >
-        <div className='flex items-center gap-3 rounded-none border-4 border-border bg-card p-1.5 shadow-neo '>
+        <div
+          className={`flex items-center gap-3 rounded-none border-4 border-border bg-card p-1.5 shadow-neo ${isDarkTheme ? '' : 'p-2'}`}
+        >
           {links.map((l) => {
             const Icon = l.icon;
 
@@ -80,7 +85,11 @@ const Navbar = () => {
                   variant='ghost'
                   size='icon'
                   asChild
-                  className='h-10 w-10 rounded-full text-muted-foreground hover:text-foreground hover:bg-primary/10'
+                  className={
+                    isDarkTheme
+                      ? 'h-10 w-10 rounded-full text-muted-foreground hover:text-foreground hover:bg-primary/10'
+                      : 'h-10 w-10 rounded-none border-2 border-border bg-background text-muted-foreground shadow-neo transition-all hover:-translate-x-[1px] hover:-translate-y-[1px] hover:bg-accent hover:text-accent-foreground hover:shadow-none'
+                  }
                 >
                   <a href={l.href} aria-label={l.label}>
                     {Icon ? (
@@ -98,7 +107,13 @@ const Navbar = () => {
                     <span className='sr-only'>{l.label}</span>
                   </a>
                 </Button>
-                <span className='pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-none border-2 border-border bg-card px-2 py-0.5 text-[10px] font-bold text-foreground opacity-0 shadow-neo  transition-all duration-200 group-hover/nav-icon:translate-y-0 group-hover/nav-icon:opacity-100'>
+                <span
+                  className={
+                    isDarkTheme
+                      ? 'pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-none border-2 border-border bg-card px-2 py-0.5 text-[10px] font-bold text-foreground opacity-0 shadow-neo transition-all duration-200 group-hover/nav-icon:translate-y-0 group-hover/nav-icon:opacity-100'
+                      : 'pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-none border-2 border-border bg-card px-2 py-0.5 text-[10px] font-bold text-foreground opacity-0 shadow-neo transition-all duration-200 group-hover/nav-icon:translate-y-0 group-hover/nav-icon:opacity-100'
+                  }
+                >
                   {l.label}
                 </span>
               </div>

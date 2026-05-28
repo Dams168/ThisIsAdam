@@ -6,9 +6,12 @@ import DiscordPresenceCard from '@/components/DiscordPresenceCard';
 
 const HeroSection = () => {
   return (
-    <section id='hero' className='relative'>
+    <section
+      id='hero'
+      className='relative overflow-hidden rounded-b-xl border border-border bg-card shadow-neo dark:rounded-none dark:border-none dark:shadow-none'
+    >
       {/* Cover Banner */}
-      <div className='h-48 md:h-64 lg:h-72 w-full overflow-hidden rounded-t-lg'>
+      <div className='h-48 md:h-64 lg:h-72 w-full overflow-hidden'>
         <img
           src={coverBanner}
           alt='Cover banner'
@@ -18,8 +21,8 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Profile area */}
-      <div className='section-card rounded-t-none relative'>
+      {/* Profile area - Sekarang menyatu tanpa border-top pemisah dan sudut atas dinormalisasi */}
+      <div className='p-6 relative z-10'>
         <div className='flex flex-col lg:flex-row gap-6'>
           {/* Left: Photo + Info */}
           <div className='flex flex-col items-center sm:items-start'>
@@ -28,9 +31,9 @@ const HeroSection = () => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.4 }}
-              className='-mt-20 sm:-mt-24 relative z-10'
+              className='-mt-24 sm:-mt-28 relative z-10'
             >
-              <div className='w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-card overflow-hidden bg-card shadow-lg'>
+              <div className='w-32 h-32 sm:w-36 sm:h-36 rounded-none border-4 border-border overflow-hidden bg-card shadow-neo dark:!rounded-full dark:border-card dark:shadow-none'>
                 <img
                   src='https://avatars.githubusercontent.com/Dams168?size=512'
                   alt='Adam Arrahman'
@@ -47,22 +50,19 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className='mt-4 text-center sm:text-left'
             >
-              <h1 className='text-2xl md:text-3xl font-bold text-foreground'>Adam Arrahman</h1>
+              <h1 className='text-foreground text-2xl font-bold'>Adam Arrahman</h1>
               <p className='text-lg text-primary font-medium mt-1'>Backend Developer</p>
               <div className='flex items-center justify-center sm:justify-start gap-1.5 text-muted-foreground mt-2 text-sm'>
                 <MapPin className='w-4 h-4' />
                 <span>Indonesia</span>
               </div>
               <div className='flex flex-wrap gap-3 mt-4 justify-center sm:justify-start'>
-                {/* <Button size='sm'>
-                  <Mail className='w-4 h-4 mr-1.5' />
-                  Contact
-                </Button> */}
-                {/* <Button variant='outline' size='sm'>
-                  <Download className='w-4 h-4 mr-1.5' />
-                  Download CV
-                </Button> */}
-                <Button variant='outline' size='icon' className='h-8 w-8' asChild>
+                <Button
+                  variant='outline'
+                  size='icon'
+                  className='h-8 w-8 dark:rounded-md dark:border dark:border-border dark:bg-card/70 dark:hover:bg-primary/10'
+                  asChild
+                >
                   <a
                     href='https://github.com/Dams168'
                     target='_blank'
@@ -72,7 +72,12 @@ const HeroSection = () => {
                     <Github className='w-4 h-4' />
                   </a>
                 </Button>
-                <Button variant='outline' size='icon' className='h-8 w-8' asChild>
+                <Button
+                  variant='outline'
+                  size='icon'
+                  className='h-8 w-8 dark:rounded-md dark:border dark:border-border dark:bg-card/70 dark:hover:bg-primary/10'
+                  asChild
+                >
                   <a
                     href='https://linkedin.com/in/adam-arrahman'
                     target='_blank'

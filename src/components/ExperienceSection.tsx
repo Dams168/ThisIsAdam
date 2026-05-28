@@ -62,7 +62,7 @@ const ExperienceSection = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <h2 className='text-xl font-bold text-foreground mb-6'>Experience</h2>
+      <h2 className='text-foreground mb-6'>Experience</h2>
       <div className='space-y-6'>
         {experiences.map((exp, i) => (
           <motion.div
@@ -94,7 +94,7 @@ const ExperienceSection = () => {
                 {exp.tags.map((tag) => (
                   <span
                     key={tag}
-                    className='text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium'
+                    className='text-xs px-2 py-0.5 rounded-none border-2 border-border bg-primary text-primary-foreground font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:rounded-full dark:border-0 dark:bg-primary/10 dark:text-primary dark:font-medium dark:shadow-none'
                   >
                     {tag}
                   </span>

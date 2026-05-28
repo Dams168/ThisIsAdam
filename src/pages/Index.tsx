@@ -5,11 +5,13 @@ import ExperienceSection from '@/components/ExperienceSection';
 import EducationSection from '@/components/EducationSection';
 import CertificationSection from '@/components/CertificationSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import FloatingThemeToggle from '@/components/FloatingThemeToggle';
 
 const Index = () => {
   return (
     <div className='min-h-screen bg-background'>
       <Navbar />
+      <FloatingThemeToggle />
       <main className='max-w-4xl mx-auto px-4 py-6 space-y-4'>
         <HeroSection />
         <AboutSection />

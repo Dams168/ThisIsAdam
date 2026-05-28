@@ -34,7 +34,7 @@ const SkillsSection = () => {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-xl font-bold text-foreground mb-6">Skills</h2>
+      <h2 className='text-foreground mb-6'>Skills</h2>
       <div className="space-y-5">
         {skillGroups.map((group, gi) => (
           <div key={gi}>

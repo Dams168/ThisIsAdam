@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-40 border-b border-border bg-card/80 backdrop-blur-md transition-opacity duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 border-b-4 border-border bg-card transition-opacity duration-300 ${
           isTopVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
@@ -70,7 +70,7 @@ const Navbar = () => {
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
         }`}
       >
-        <div className='flex items-center gap-3 rounded-full border border-border/60 bg-card/90 p-1.5 shadow-lg backdrop-blur-md'>
+        <div className='flex items-center gap-3 rounded-none border-4 border-border bg-card p-1.5 shadow-neo '>
           {links.map((l) => {
             const Icon = l.icon;
 
@@ -98,7 +98,7 @@ const Navbar = () => {
                     <span className='sr-only'>{l.label}</span>
                   </a>
                 </Button>
-                <span className='pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-full border border-border/70 bg-card px-2 py-0.5 text-[10px] font-medium text-foreground opacity-0 shadow-sm transition-all duration-200 group-hover/nav-icon:translate-y-0 group-hover/nav-icon:opacity-100'>
+                <span className='pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-none border-2 border-border bg-card px-2 py-0.5 text-[10px] font-bold text-foreground opacity-0 shadow-neo  transition-all duration-200 group-hover/nav-icon:translate-y-0 group-hover/nav-icon:opacity-100'>
                   {l.label}
                 </span>
               </div>

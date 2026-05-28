@@ -7,7 +7,10 @@ const experiences = [
     title: 'Backend Developer - Internship',
     company: 'PT. Padepokan Tujuh Sembilan',
     period: 'Dec 2025 – Present',
-    highlights: [],
+    highlights: [
+      'Delivered 4 core modular features for Laravel-based “LinkStack”, refactored the multi-contributor codebase, built custom analytics middleware, and integrated YouTube Intro embedding for enhanced real-time insights and page personalization while enforcing strict link filtering to block of prohibited URLs.',
+      'Integrated Gemini‑API powered AI reviewer for “SmartEdu AI Essay” and created an offline‑mode fallback with queueing to ensure service continuity.',
+    ],
     tags: ['Laravel', 'PHP', 'System Analyst'],
   },
   {

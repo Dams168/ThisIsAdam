@@ -87,6 +87,21 @@ const HeroSection = () => {
                     <Linkedin className='w-4 h-4' />
                   </a>
                 </Button>
+                <Button
+                  variant='outline'
+                  size='icon'
+                  className='h-8 w-8 dark:rounded-md dark:border dark:border-border dark:bg-card/70 dark:hover:bg-primary/10'
+                  asChild
+                >
+                  <a
+                    href='mailto:adamrohman2003@gmail.com'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='Email contact'
+                  >
+                    <Mail className='w-4 h-4' />
+                  </a>
+                </Button>
               </div>
             </motion.div>
           </div>

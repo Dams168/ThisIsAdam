@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import coverBanner from '@/assets/cover-banner.jpg';
 import DiscordPresenceCard from '@/components/DiscordPresenceCard';
 
+const CV_URL = 'https://drive.google.com/uc?export=download&id=18PEOHK_pOKwmde2kqrbJG8a6Cx9mFqys';
+
 const HeroSection = () => {
   return (
     <section
@@ -100,6 +102,22 @@ const HeroSection = () => {
                     aria-label='Email contact'
                   >
                     <Mail className='w-4 h-4' />
+                  </a>
+                </Button>
+                <Button
+                  variant='default'
+                  size='sm'
+                  className='h-8 px-3 gap-1.5 text-xs dark:rounded-md'
+                  asChild
+                >
+                  <a
+                    href={CV_URL}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='Download CV'
+                  >
+                    <Download className='w-3.5 h-3.5' />
+                    Download CV
                   </a>
                 </Button>
               </div>

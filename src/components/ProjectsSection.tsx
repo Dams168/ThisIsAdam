@@ -50,6 +50,14 @@ const projects = [
     demoUrl: '#',
     codeUrl: 'https://github.com/Dams168/SIRA-Labtif',
   },
+  {
+    title: 'Glucose Clamp - API',
+    description: 'A RESTful API for managing glucose clamp data and related functionalities.',
+    tags: ['Java', 'Spring Boot', 'PostgreSQL', 'RESTful API', 'Swagger'],
+    image: 'https://opengraph.githubassets.com/1/adrianeka/glucose-clamp-be`',
+    demoUrl: '#',
+    codeUrl: 'https://github.com/adrianeka/glucose-clamp-be',
+  },
 ];
 
 const ProjectsSection = () => {

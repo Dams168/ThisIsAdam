@@ -58,6 +58,15 @@ const projects = [
     demoUrl: '#',
     codeUrl: 'https://github.com/adrianeka/glucose-clamp-be',
   },
+  {
+    title: 'SmartEdu AI Essay Reviewer',
+    description:
+      'A web application that utilizes AI to provide feedback and suggestions for Essay Reviewing',
+    tags: ['PHP', 'AI', 'MySQL', 'Chamillo'],
+    image: 'https://opengraph.githubassets.com',
+    demoUrl: '#',
+    codeUrl: '#',
+  },
 ];
 
 const ProjectsSection = () => {
